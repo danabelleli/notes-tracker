@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const store = require('../db/store');
 
-app.get('./notes', (req, res) => {
+app.get('/notes', (req, res) => {
     store.getNotes().then((notes) => {
         return res.json(notes);
     }).catch(err => {
