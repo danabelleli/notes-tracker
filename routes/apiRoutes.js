@@ -30,7 +30,7 @@ app.delete('/notes/:id', (req, res) => {
         .then((parsedNotes) => {
             const newArray = parsedNotes.filter((note) => note.id !== deletedNote);
             writeToFile('db/db.json', newArray);
-        });
+        })
 });
 
 module.exports = app;
